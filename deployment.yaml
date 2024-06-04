@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tucityfe-deployment
+  labels:
+    app: tucityfe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tucityfe
+  template:
+    metadata:
+      labels:
+        app: tucityfe
+    spec:
+      containers:
+        - name: tucityfe
+          image: lucvdacker/tucityfe:latest
+          ports:
+            - containerPort: 4200
+              hostPort: 4200

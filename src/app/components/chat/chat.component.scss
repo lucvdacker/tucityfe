@@ -1,0 +1,49 @@
+.message-content {
+  overflow: hidden;
+}
+
+.chat-container {
+  width: 100%;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #5de19c;
+  height: 48px
+}
+
+.sent {
+  background-color: #dcf8c6;
+  width: 70%;
+  align-self: flex-end;
+  align-content: start;
+}
+
+.received {
+  align-self: flex-start;
+  background-color: #ffffff;
+  width: 70%;
+  align-content: start;
+  border: 1px solid #dcf8c6;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.message-input {
+  flex: 1;
+  margin: 10px;
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+}
+
+.date-box {
+  text-align: right;
+}

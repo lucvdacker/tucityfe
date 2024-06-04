@@ -1,0 +1,15 @@
+<div class="align-content-center">
+  <div class="tbgwrap">
+  </div>
+  <div class="tphoto">
+<!--    <img [src]="tutors[index].imageUrl" title="tphoto" alt="Profile Picture"/>-->
+    <div class="tname">{{ tutors[index].firstName }}, <span class="age">{{ this.calculateAge(tutors[index].age) }}</span></div>
+  </div>
+  <div class="button-container">
+    <div (click)='this.dislike()' class="round-dislike-button"><i class="fa fa-times button-icon" aria-hidden="true"></i></div>
+    <a class="btn-primary btn-info">
+      <i class="bi-info-circle" aria-hidden="true"></i>
+    </a>
+    <div (click)='this.like(tutors[index])' class="round-like-button"><i class="fa fa-heart" aria-hidden="true"></i></div>
+  </div>
+</div>

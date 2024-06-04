@@ -1,0 +1,16 @@
+<div class="chat-container">
+  <div class="chat-container">
+    <div *ngFor="let message of messages" class="message"
+         [ngClass]="{'sent': message.senderId === this.senderId, 'received': message.senderId !== this.senderId}">
+      <div class="message-content">
+        <span>{{message.senderName}}:</span>
+        <span>
+            {{ this.decryptString(message.body) }}
+        </span>
+        <p class="date-box">{{message.dateSent}}</p>
+      </div>
+    </div>
+    <input class="message-input" type="text" [(ngModel)]="newMessage" placeholder="Your message">
+    <button type="button" class="btn btn-success" (click)="sendMessage()">Success</button>
+  </div>
+</div>
